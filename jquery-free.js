@@ -2,15 +2,11 @@
  * desc : 模拟jquery的API
  * author : baoxd
  * date :　 2015-1-13
+ * 开始写jquery-free.js时只是为了打发闲暇无趣的时间
+ * 由于自身水平、精力有限，代码本身可能不太严谨 ，测试也不太系统 ，也可能存在错误，欢迎指出 
  */
  
- 
 (function(window,document){
-	
-	
-	
-	
-	
 	/********************  核心模块 ********************/
 	
 	/**
@@ -43,16 +39,9 @@
 		}
 	}
 	
-	
-	
 	$$.fn = $$.prototype = HTMLElement.prototype ;
 	$$.arr = {} ;
 	$$.arr.fn = NodeList.prototype ;
-	
-	
-	
-	
-	
 	
 	/**
 	 * 组件的生成，支持递归生成
@@ -137,11 +126,6 @@
 		
 	}
 	
-	
-	
-	
-	
-	
 	/********************属性、css操作模块*********************/
 	
 	/**
@@ -161,11 +145,6 @@
 			return this.getAttribute(attrKey);
 		}
 	}
-	
-	
-	
-	
-	
 	/**
 	 *  属性删除
 	 */
@@ -178,10 +157,6 @@
 			console.info(e) ;
 		}
 	}
-	
-	
-	
-	
 	/**
 	 * class添加
 	 */
@@ -197,11 +172,6 @@
 	 		console.info(e) ;
 	 	}
 	}
-	
-	
-	
-	
-	
 	/**
 	 * class删除
 	 */
@@ -214,12 +184,6 @@
 			classList.remove(removeClass);
 		}
 	}
-	
-	
-	
-	
-	
-	
 	/**
 	 * class的toggle替换
 	 * @param {} toggleClass
@@ -233,11 +197,6 @@
 		classList.toggle(arguments[0])　;
 		
 	}
-	
-	
-	
-	
-	
 	/**
 	 * html的获取和替换
 	 * @param {} html
@@ -253,11 +212,6 @@
 			this.innerHTML = html ;
 		}
 	}
-	
-	
-	
-	
-	
 	/**
 	 * text的获取和替换
 	 * @param {} text
@@ -273,11 +227,6 @@
 			this.textContent = text ;
 		}
 	}
-	
-	
-	
-	
-	
 	/**
 	 * value的获取和替换
 	 * @param {} val
@@ -294,10 +243,6 @@
 			this.value = val ;
 		}
 	} ;
-	
-	
-	
-	
 	/**
 	 * 定义NodeList的方法
 	 */
@@ -317,11 +262,6 @@
 		}
 	}) ;
 	
-	
-	
-	
-	
-	
 	/************************css操作模块*************************/
 
 	/**
@@ -337,11 +277,6 @@
 			return this.currentStyle ;
 		}
 	}
-	
-	
-	
-	
-	
 	/**
 	 * css的获取和设置
 	 * @param {} name
@@ -391,11 +326,6 @@
 		return this ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 获取组件位置信息
 	 * @param {} flag 为true时  获取相对于页面左上角的位置 否则获取相对于父组件的位置
@@ -426,10 +356,6 @@
 		return position ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 设置组件scrollTop
 	 * @param {} top
@@ -444,10 +370,6 @@
 		return this ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 设置组件scrollLeft
 	 * @param {} left
@@ -460,9 +382,6 @@
 		this.scrollLeft = left ;
 		return this ;
 	}
-	
-	
-	
 	
 	/**
 	 * 获取和设置组件的高
@@ -484,10 +403,6 @@
 		}
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 设置、获取组件的宽
 	 * @param {} val
@@ -508,11 +423,6 @@
 		}
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 获取组件内部区域高度
 	 * @return {}
@@ -526,11 +436,6 @@
 		return height + parseFloat(paddingBottom) + parseFloat(paddingTop) ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 获取组件内部区域的宽度
 	 * @return {}
@@ -543,12 +448,6 @@
 			
 		return width + parseFloat(paddingLeft) + parseFloat(paddingRight) ;
 	}
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 获取组件的外部高度
@@ -577,10 +476,6 @@
 		}
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 获取组件的外部宽度，参数为true时包括margin
 	 * @return {}
@@ -607,10 +502,6 @@
 		}
 	} ;
 	
-	
-	
-	
-	
 	/**
 	 * 
 	 * NodeList定义一下方法
@@ -631,14 +522,9 @@
 			return result[0] ;
 		}
 	}) ;
-
-	
-	
-	
 	
 	
 	/*************************文档处理模块************************/
-
 
 	/**
 	 * 组件追加子元素
@@ -703,10 +589,6 @@
 			}) ;
 		}
 	}
-	
-	
-	
-	
 	/**
 	 * 
 	 * 匹配的组件追加到指定的组件集合中
@@ -746,11 +628,6 @@
 		}
 		
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 在组件头部添加子元素
@@ -839,9 +716,6 @@
 		}
 	}
 	
-	
-	
-	
 	/**
 	 * 
 	 * 匹配的组件添加到指定的组件集合头部
@@ -880,9 +754,6 @@
 			
 		}
 	}
-	
-	
-	
 	
 	/**
 	 * 
@@ -931,11 +802,6 @@
 			}) ;
 		}
 	}
-	
-	
-	
-	
-	
 	/***
 	 * 在匹配组件前添加元素
 	 * 参数可为字符串和组件
@@ -962,9 +828,6 @@
 		}
 		
 	}
-	
-	
-	
 	
 	/***
 	 * 把匹配元素插入到指定元素集合后
@@ -995,10 +858,6 @@
 			}
 		}
 	}
-	
-	
-	
-	
 	/**
 	 * 把匹配的元素插入到指定元素集合前
 	 */
@@ -1035,10 +894,6 @@
 	
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 指定元素环绕匹配元素
 	 * 
@@ -1060,10 +915,6 @@
 		this.parentNode.replaceChild(wrap,this) ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 取消匹配元素的父元素
 	 */
@@ -1081,10 +932,6 @@
 		parentParentNode.removeChild(parentNode);
 		
 	}
-	
-	
-	
-	
 	
 	/**
 	 * NodeList的unwrap方法和HTMLElement的unwrap方法逻辑不一样 ，在此单独拿出
@@ -1137,10 +984,6 @@
 		});
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 将匹配的元素集合环绕  和 wrap不同
 	 */
@@ -1176,10 +1019,6 @@
 		
 	}
 	
-	
-	
-	
-	
 	/***
 	 * 将所有匹配的元素的内部子元素用指定元素环绕
 	 */
@@ -1205,10 +1044,6 @@
 		return ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 将匹配元素用指定元素替换
 	 */
@@ -1222,10 +1057,6 @@
 		}
 		this.parentNode.replaceChild(rep,this) ;
 	}
-	
-	
-	
-	
 	
 	/***
 	 * 	将匹配元素替换掉指定元素集合
@@ -1259,10 +1090,6 @@
 		}
 	}
 	
-	
-	
-	
-	
 	/***
 	 * 清空匹配元素的子元素
 	 */
@@ -1275,10 +1102,6 @@
 			this.removeChild(childs[i]) ;
 		}
 	}
-	
-	
-
-	
 	/**
 	 * 删除匹配的元素，如果有参数 ， 则删除匹配参数的元素
 	 * 
@@ -1348,9 +1171,6 @@
 		}
 	}
 	
-	
-	
-	
 	/**
 	 * 元素克隆
 	 * @return {}
@@ -1360,9 +1180,6 @@
 		var f = arguments[0] ;
 		return (!f) ?  this.cloneNode() : this.cloneNode(true) ;
 	}
-	
-	
-	
 	
 	$$.arr.fn.clone = function(){
 		
@@ -1379,10 +1196,7 @@
 		
 			return result ;
 	};
-	
-	
-	
-	
+
 	['append','appendTo','prepend','prependTo','after','before','insertAfter','insertBef','wrap','wrapInner','replaceWith','empty','remove'].forEach(function(method){
 	
 		var method = method ;
@@ -1400,12 +1214,6 @@
 	}) ;
 	
 	
-	
-	
-	
-	
-	
-	
 	/*************************筛选***********************/
 	$$.fn.eq = function(){
 		
@@ -1414,9 +1222,6 @@
 		
 		return this ;
 	}
-	
-	
-	
 	/**
 	 * 获取指定位置的元素
 	 */
@@ -1443,17 +1248,10 @@
 		}
 		
 	}
-	
-	
-	
-	
+
 	$$.fn.first = $$.fn.last = function(){
 		return this ;
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 获取元素集合第一个元素（本方法是定义在元素集合上的）
@@ -1464,10 +1262,6 @@
 		return this[0] ;
 		
 	}
-	
-	
-	
-	
 	/**
 	 * 获取元素集合最后一个元素
 	 */
@@ -1477,9 +1271,6 @@
 		return this[this.length-1] ;
 		
 	}
-	
-	
-	
 	
 	/**
 	 * 判断元素是否有某个class
@@ -1493,11 +1284,6 @@
 		var classList = this.classList ;
 		return classList.contains(clazz) ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 判断元素集合中是否有元素含有指定的class,只要有一个元素含有该class就返回true 否则返回false
@@ -1521,10 +1307,6 @@
 		return hasClass;
 		
 	}
-	
-	
-	
-	
 	
 	$$.fn.filter = function(){
 		
@@ -1565,10 +1347,6 @@
 		else 
 			return null;
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 元素集合过滤，参数可为字符串、元素或元素集合 数组 自定义的过滤函数
@@ -1655,10 +1433,6 @@
 			}
 	}
 	
-	
-	
-	
-	
 	function regSelectorNodes(){
 		var arg = arguments[0] ,selectorNodes = [];
 		if(!arg) return null ;
@@ -1698,13 +1472,6 @@
 		return selectorNodes ;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 根据选择器、元素来检测匹配元素集合，如果其中至少有一个元素符合这个给定的表达式就返回true
 	 */
@@ -1734,9 +1501,6 @@
 		}
 	}
 	
-	
-	
-	
 	/**
 	 * 元素集合匹配检测
 	 */
@@ -1752,10 +1516,6 @@
 		
 		return f ;
 	}
-	
-	
-	
-	
 	/**
 	 * 将一组元素转换成其他数组（不论是否是元素数组）
 	 */
@@ -1767,10 +1527,6 @@
 		result.push(callback.call(this)) ;
 		return result ;		
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 将一组元素转换成其他数组（不论是否是元素数组）
@@ -1784,10 +1540,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 保留包含特定后代的元素，去掉那些不含有指定后代的元素
@@ -1818,9 +1570,6 @@
 		}
 	}
 	
-	
-	
-	
 	/**
 	 * 保留包含特定后代的元素，去掉那些不含有指定后代的元素
 	 */
@@ -1836,10 +1585,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
 	/**
 	 * 删除与指定表达式匹配的元素
 	 */
@@ -1866,11 +1611,6 @@
 		else return currNode ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 删除与指定表达式匹配的元素
 	 */
@@ -1887,11 +1627,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 选取一个匹配的子集
 	 */
@@ -1904,9 +1639,6 @@
 		if((start == 0 && end > 0 && reg.test(end)) || (start == -1 && end < -1 && reg.test(end))) return this ;
 		else return null ;
 	}
-	
-	
-	
 	
 	/**
 	 * 选取一个匹配的子集
@@ -1932,15 +1664,6 @@
 		}
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/***********************查找******************/
@@ -1976,10 +1699,6 @@
 		
 		return result ;
 	}
-	
-	
-	
-	
 	/**
 	 *  查找元素的子节点
 	 */
@@ -1991,10 +1710,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 从元素本身开始，逐级向上级元素匹配，并返回最先匹配的元素
@@ -2032,10 +1747,6 @@
 		}
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 从元素本身开始，逐级向上级元素匹配，并返回最先匹配的元素
 	 * 参数暂不支持多个参数
@@ -2061,10 +1772,6 @@
 		return result ;
 		
 	}
-	
-	
-	
-	
 	
 	/**
 	 * 	搜索所有与指定表达式匹配的元素。这个函数是找出正在处理的元素的后代元素的好方法。
@@ -2115,10 +1822,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 	搜索所有与指定表达式匹配的元素。这个函数是找出正在处理的元素的后代元素的好方法。元素集合实现方式
 	 *	所有搜索都依靠jQuery表达式来完成。这个表达式可以使用CSS1-3的选择器语法来写
@@ -2136,11 +1839,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 找到每个段落的后面紧邻的同辈元素
@@ -2166,10 +1864,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 找到每个段落的后面紧邻的同辈元素
 	 */
@@ -2181,11 +1875,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 查找当前元素之后所有的同辈元素
@@ -2215,11 +1904,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 查找当前元素之后所有的同辈元素
 	 */
@@ -2243,12 +1927,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/***
 	 * 查找当前元素之后所有的同辈元素，直到遇到匹配的那个元素为止
 	 */
@@ -2269,12 +1947,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 查找当前元素之后所有的同辈元素，直到遇到匹配的那个元素为止
 	 */
@@ -2286,12 +1958,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 返回第一个匹配元素用于定位的父节点
 	 */
@@ -2300,12 +1966,6 @@
 		result.push(this.offsetParent) ;
 		return result;
 	}
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 返回第一个匹配元素用于定位的父节点
@@ -2317,13 +1977,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 取得一个包含着所有匹配元素的唯一父元素的元素集合
@@ -2345,12 +1998,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 取得一个包含着所有匹配元素的唯一父元素的元素集合
 	 */
@@ -2361,12 +2008,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 取得一个包含着所有匹配元素的祖先元素的元素集合（不包含根元素）。可以通过一个可选的表达式进行筛选
@@ -2388,12 +2029,6 @@
 		}
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
 	/**
 	 * 取得一个包含着所有匹配元素的祖先元素的元素集合（不包含根元素）。可以通过一个可选的表达式进行筛选
 	 */
@@ -2404,11 +2039,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 查找当前元素的所有的父辈元素，直到遇到匹配的那个元素为止
@@ -2432,12 +2062,6 @@
  		return parentNodes ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 查找当前元素的所有的父辈元素，直到遇到匹配的那个元素为止
 	 * 返回的数组里包含了下面所有找到的父辈元素，但不包括那个选择器匹配到的元素
@@ -2449,11 +2073,6 @@
 		});
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	
 	/**
@@ -2479,11 +2098,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合
 	 * 可以用一个可选的表达式进行筛选。只有紧邻的同辈元素会被匹配到，而不是前面所有的同辈元素
@@ -2495,13 +2109,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 查找当前元素之前所有的同辈元素
@@ -2527,11 +2134,6 @@
 		
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * 查找当前元素之前所有的同辈元素
 	 */
@@ -2542,11 +2144,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 查找当前元素之前所有的同辈元素，直到遇到匹配的那个元素为止
@@ -2570,10 +2167,6 @@
 		
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 如果没有选择器匹配到，或者没有提供参数，那么排在前面的所有同辈元素都会被选中。这就跟用没有提供参数的 .prevAll()效果一样
 	 */
@@ -2584,11 +2177,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * 取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合。可以用可选的表达式进行筛选
@@ -2612,11 +2200,7 @@
 		return result ;		
 		
 	}
-	
-	
-	
-	
-	
+
 	/**
 	 * 取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合。可以用可选的表达式进行筛选
 	 */
@@ -2627,16 +2211,6 @@
 		}) ;
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/*************************串联模块*************************/
@@ -2669,12 +2243,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
-	
-	
 	/**
 	 * 本非法用于连接分别与两个表达式匹配的元素结果集
 	 * 暂不支持以元素在HTML文档中出现的顺序来排序
@@ -2687,10 +2255,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 查找匹配元素内部所有的子节点（包括文本节点),本方法和childs有冲突 ,暂不解决
 	 *
@@ -2699,9 +2263,6 @@
 		return []['slice'].call(this.childNodes,0);
 		//return this.childNodes;
 	}
-	
-	
-	
 	
 	/**
 	 * 查找匹配元素内部所有的子节点（包括文本节点),本方法和childs有冲突 ,暂不解决
@@ -2714,21 +2275,6 @@
 		});
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/***************************工具方法*****************************/
@@ -2771,10 +2317,6 @@
 		return result ;
 	}
 	
-	
-	
-	
-	
 	/**
 	 * 连接两个数组，并除重
 	 */
@@ -2794,12 +2336,6 @@
 		}
 		return result ;
 	}
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 用来在$$、$$.fn命名空间上增加新函数
@@ -2856,8 +2392,6 @@
 		return target ;		
 	}
 	
-	
-	
 	var class2type = {} ,
 		trimLeft = /^\s+/ ,
 		trimRight = /\s+$/ ,
@@ -2878,30 +2412,23 @@
 		trim = String.prototype.trim ,
 		indexOf = Array.prototype.indexOf ;
 		
-	
-	
 	$$.isFunction = function(){
 		return $$.type(arguments[0]) === "function" ;
 	};
 	
-	
-	
 	$$.isArray = Array.isArray || function(){
 		return $$.type(arguments[0]) === 'array' ;
 	}
-	
 	
 	$$.isWindow = function(){
 		var obj = arguments[0] ;
  		return obj && typeof obj === 'object' && 'setInterval' in obj ;
 	}
 	
-	
 	$$.isNaN = function(){
 		var obj = arguments[0] ;
 		return obj == null || !rdigit.test( obj ) || isNaN( obj );
 	}
-	
 	
 	$$.isEmptyObject = function(){
 		var obj = arguments[0] ;
@@ -2911,13 +2438,10 @@
 		return true ;
 	}
 	
-	
 	$$.error = function(){
 		var msg = arguments[0] ;
 		throw msg
 	}
-	
-	
 	
 	$$.trim = function(){
 		var text = arguments[0] ;
@@ -2925,8 +2449,6 @@
 			"" :
 			text.toString().replace(trimLeft, "").replace(trimRight , "") ;
 	}
-	
-	
 	
 	$$.parseJSON = function(){
 		var data = arguments[0] ;
@@ -2949,7 +2471,6 @@
 		$$.error( "Invalid JSON: " + data ) ;
 		
 	}
-	
 	
 	$$.parseXML = function(){
 		var data = arguments[0] ,xml ,tmp ;
@@ -2975,16 +2496,12 @@
 		return xml ;
 	}
 	
-	
-	
 	$$.type = function(){
 		var obj = arguments[0] ;
 		return obj == null ? 
 			String(obj) :
 			class2type[ toString.call(obj) ] || "object";
 	};
-	
-	
 	
 	$$.isPlainObject = function(){
 		var obj = arguments[0] ;
@@ -3009,7 +2526,6 @@
 		
 		return key === undefined ||  hasOwn.call(obj,key) ;
 	}
-	
 	
 	//each遍历对象和数组等元素
 	$$.each = function(){
@@ -3055,16 +2571,9 @@
 		return object ;
 	} ;
 	
-	
-	
-	
 	$$.each("Boolean Number String Function Array Date RegExp Object".split(" "),function(i,name){
 		class2type["[object " + name + "]" ] = name.toLowerCase() ;
 	}) ;
-	
-	
-	
-	
 	
 	$$.inArray = function(){
 		var elem = arguments[0] ,
@@ -3086,22 +2595,6 @@
 		
 		return -1 ;		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/*************************延迟对象*************************/
@@ -3277,18 +2770,6 @@
 	}) ;
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/***************************事件**************************/
 	
 	var readList = null ;
@@ -3311,7 +2792,6 @@
 		}
 	}
 	
-	
 	$$.fn.ready = $$.arr.fn.ready = function(){
 		var fn = arguments[0] ;
 		$$.bindReady() ;
@@ -3319,8 +2799,6 @@
 		readList.done( fn );
 		return this ;
 	}
-	
-	
 	
 	$$.extend({
 		isReady : false ,
@@ -3379,13 +2857,9 @@
 		}
 	}) ;
 	
-	
-	
-	
 	var eventTypeArr = ["blur","change","click","dblclick","error","focus","focusin","focusout",
 						"keydown","keyup","mousedown","mouseenter","mouseleave","mousemove","mouseout",
 						"mouseover","mouseup","resize","srcoll","select","submit","unload"] ;                                                     
-	
 	
 	/**
 	 * 事件操作 ,暂时提供事件绑定、事件解除、事件触发三个最实用的方法
@@ -3504,10 +2978,7 @@
 			return this ;
 		}
 	}) ;
-	
-	
-	
-	
+
 	eventTypeArr['forEach'](function( type , i ){
 		$$.fn[type] = function(){
 			var callback = arguments[0] ,
@@ -3527,8 +2998,6 @@
 		}
 	}) ;
 	
-	
-	
 	["on" , "off" , "bind" , "one" , "trigger"].forEach(function(type){
 		var obj = {};
 		obj[type] = function() {
@@ -3540,14 +3009,6 @@
 		}
 		$$.arr.fn.extend(obj) ;
 	}) ;
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	/***************************ajax**************************/
@@ -3807,10 +3268,6 @@
 		
 	}) ;
 	
-	
-	
-	
-	
 	$$.fn.extend({
 		load : function(){
 			var url = arguments[0] ,
@@ -3848,9 +3305,6 @@
 		}
 	}) ;
 	
-	
-	
-	
 	$$.arr.fn.extend({
 		load : function () {
 			var url = arguments[0] ,
@@ -3886,15 +3340,11 @@
 				}
 			}
 			
-			
 			jqxhr.open( type , url ) ;
 			jqxhr.send( null ) ;
 			return elems ;
 		}
 	}) ;
-	
-	
-	
 	
 	/**
 	 * 定义ajax事件 ，ajax事件的触发时机很重要 
@@ -3909,18 +3359,6 @@
 			}) ;
 		}
 	}) ;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	/****************************工具方法补充****************************/
 	$$.extend({
@@ -4011,37 +3449,6 @@
 		}
 	}) ;
 	
-	
-	
-	
 	window.$$ = $$ ;
 
 })(window,document) ;
-
-
-
-
-
-/**
- * 
- * 开始写jquery-free.js时只是为了打发闲暇无趣的时间
- * 由于自身水平、精力有限，代码本身可能不太严谨 ，测试也不太系统 ，也可能存在错误，欢迎指出 
- * 1459815090@qq.com 
- * 
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
